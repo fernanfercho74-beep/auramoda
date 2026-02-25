@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURAMODA | Catálogo Premium</title>
+    
+    <!-- Tailwind CSS (Framework de Diseño) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts (Tipografía Premium) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome (Iconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Configuración personalizada de Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-black': '#1a1a1a',
+                        'brand-gray': '#f4f4f4',
+                        'brand-accent': '#d4af37', // Un toque dorado sutil para detalles
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Animaciones Personalizadas */
+        .fade-in { animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        
+        /* Scrollbar oculto para estética limpia */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Transiciones suaves */
+        .transition-all-300 { transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="bg-white text-brand-black font-sans antialiased selection:bg-black selection:text-white">
+
+    <!-- HEADER / NAV -->
+    <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 transition-all-300">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-serif font-bold tracking-widest uppercase">AURA MODA</a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-8 text-sm font-medium tracking-wide">
+                <a href="index.html" class="hover:text-gray-500 transition">Inicio</a>
+                <a href="#shop" class="hover:text-gray-500 transition">Colección</a>
+                <a href="#about" class="hover:text-gray-500 transition">Nosotros</a>
+            </nav>
+
+            <!-- Icons -->
+            <div class="flex items-center space-x-5">
+                <button class="relative group" onclick="toggleCart()">
+                    <i class="fa-solid fa-bag-shopping text-xl group-hover:text-gray-500 transition"></i>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-black text-white text-[10px] w-5 h-5 flex items-center justify-center rounded-full opacity-0 transition-opacity">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+
+    <BR></BR>
+
+    <!-- SHOP SECTION -->
+    <section id="shop" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            
+            <!-- Filtros y Buscador -->
+            <div class="flex flex-col md:flex-row justify-between items-center mb-12 gap-4">
+                <h2 class="text-3xl font-serif font-bold">Nuestra Colección Shein</h2>
+                
+                <div class="flex flex-col md:flex-row gap-4 w-full md:w-auto">
+                    <!-- Buscador -->
+                    <div class="relative">
+                        <input type="text" id="search-input" placeholder="Buscar producto..." class="pl-4 pr-10 py-2 border border-gray-200 focus:outline-none focus:border-black text-sm w-full md:w-64 transition-all">
+                        <i class="fa-solid fa-search absolute right-3 top-3 text-gray-400 text-xs"></i>
+                    </div>
+                    
+                    <!-- Filtros -->
+                    <div class="flex gap-2 overflow-x-auto no-scrollbar">
+                        <button class="filter-btn active px-4 py-2 text-xs uppercase font-bold border border-black bg-black text-white transition-all" data-category="all">Todo</button>
+                        <button class="filter-btn px-4 py-2 text-xs uppercase font-bold border border-gray-200 hover:border-black transition-all" data-category="mujer">Mujer</button>
+                        <button class="filter-btn px-4 py-2 text-xs uppercase font-bold border border-gray-200 hover:border-black transition-all" data-category="hombre">Hombre</button>
+                        <button class="filter-btn px-4 py-2 text-xs uppercase font-bold border border-gray-200 hover:border-black transition-all" data-category="Niños">Niños</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grid de Productos -->
+            <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Los productos se inyectan aquí con JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-black text-white py-12 border-t border-gray-800">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+            <div>
+                <h3 class="font-serif text-xl mb-4">Lumière</h3>
+                <p class="text-gray-400 text-sm">Redefiniendo la moda moderna con elegancia atemporal y calidad superior.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 uppercase text-xs tracking-widest">Enlaces</h4>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="#" class="hover:text-white">Política de Envíos</a></li>
+                    <li><a href="#" class="hover:text-white">Devoluciones</a></li>
+                    <li><a href="#" class="hover:text-white">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 uppercase text-xs tracking-widest">Síguenos</h4>
+                <div class="flex justify-center md:justify-start space-x-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-white hover:text-black transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-white hover:text-black transition"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-12 text-gray-600 text-xs">
+            &copy; 2024 Lumière Store. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <!-- CARRITO (SLIDE-OVER) -->
+    <div id="cart-overlay" class="fixed inset-0 bg-black/50 z-[60] hidden transition-opacity opacity-0" onclick="toggleCart()"></div>
+    <div id="cart-panel" class="fixed top-0 right-0 h-full w-full md:w-[400px] bg-white z-[70] shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+        <div class="p-6 border-b border-gray-100 flex justify-between items-center">
+            <h2 class="text-xl font-serif font-bold">Tu Carrito</h2>
+            <button onclick="toggleCart()" class="text-gray-400 hover:text-black"><i class="fa-solid fa-xmark text-xl"></i></button>
+        </div>
+        
+        <div id="cart-items" class="flex-1 overflow-y-auto p-6 space-y-6">
+            <!-- Items del carrito -->
+            <p class="text-center text-gray-400 mt-10">Tu carrito está vacío.</p>
+        </div>
+
+        <div class="p-6 border-t border-gray-100 bg-gray-50">
+            <div class="flex justify-between mb-4 text-lg font-bold">
+                <span>Subtotal</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <p class="text-xs text-gray-500 mb-4 text-center">Envíos e impuestos calculados al finalizar.</p>
+            
+            <!-- Botones de Pago -->
+            <button onclick="checkout('stripe')" class="w-full bg-black text-white py-3 mb-3 font-semibold hover:bg-gray-800 transition flex justify-center items-center gap-2">
+                <i class="fa-brands fa-cc-stripe"></i> Pagar con Tarjeta
+            </button>
+            <button onclick="checkout('paypal')" class="w-full bg-[#0070ba] text-white py-3 font-semibold hover:bg-blue-700 transition flex justify-center items-center gap-2">
+                <i class="fa-brands fa-paypal"></i> Pagar con PayPal
+            </button>
+        </div>
+    </div>
+
+    <!-- WHATSAPP FLOTANTE -->
+    <a href="https://wa.me/584125951040?text=Hola,%20estoy%20interesado%20en%20un%20producto%20de%20su%20catálogo." target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform z-40">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // --- 1. DATOS DE PRODUCTOS (Simulación de Base de Datos) ---
+        const products = [
+            { id: 1, name: "Vestido de Dama Shein", price: 25, category: "mujer", image: "https://i.ibb.co/VcN90Bng/B3.jpg" },
+            { id: 1, name: "Vestido de Dama Shein", price: 25, category: "mujer", image: "https://i.ibb.co/RkWMxhkT/b2.jpg" },
+            { id: 4, name: "Vestido de Niña shein", price: 26, category: "mujer", image: "https://i.ibb.co/F4MhrQnq/f12.jpg" },
+            { id: 2, name: "Camisa Oxford Marron Shein", price: 25, category: "hombre", image: "https://i.ibb.co/Nz8wv83/hombre.jpg" },
+            { id: 6, name: "Franela Azul y Blanco Shein", price: 16, category: "hombre", image: "https://i.ibb.co/0RdCywqZ/f2.jpg" },
+            { id: 7, name: "Franela negro con rojo Shein", price: 16, category: "hombre", image: "https://i.ibb.co/tpw6CrL7/f1.jpg" },
+            { id: 3, name: "Conjunto de Niño Shein", price: 9, category: "Niños", image: "https://i.ibb.co/pjx5TWZ9/t1.jpg" },
+            { id: 5, name: "Conjunto de Niños", price: 8, category: "Niños", image: "https://i.ibb.co/jkmfg2jR/t4.jpg" },
+            { id: 8, name: "Conjunto de Niño Capitan America", price: 8.00, category: "Niños", image: "https://i.ibb.co/0yHn7vqZ/75e83fdf-7afb-4898-a7c1-58b78979fca4.jpg" },
+        ];
+
+        let cart = [];
+
+        // --- 2. RENDERIZADO DE PRODUCTOS ---
+        const productGrid = document.getElementById('product-grid');
+
+        function renderProducts(filter = 'all', search = '') {
+            productGrid.innerHTML = '';
+            
+            const filtered = products.filter(p => {
+                const matchesCategory = filter === 'all' || p.category === filter;
+                const matchesSearch = p.name.toLowerCase().includes(search.toLowerCase());
+                return matchesCategory && matchesSearch;
+            });
+
+            filtered.forEach(product => {
+                const card = document.createElement('div');
+                card.className = 'group fade-in';
+                card.innerHTML = `
+                    <div class="relative overflow-hidden mb-4 bg-gray-100 aspect-[3/4]">
+                        <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <button onclick="addToCart(${product.id})" class="w-full bg-white text-black py-3 text-sm font-bold uppercase hover:bg-black hover:text-white transition shadow-lg">
+                                Agregar al Carrito
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-medium text-lg">${product.name}</h3>
+                            <p class="text-gray-500 text-sm capitalize">${product.category}</p>
+                        </div>
+                        <span class="font-serif text-lg font-bold">$${product.price}</span>
+                    </div>
+                `;
+                productGrid.appendChild(card);
+            });
+        }
+
+        // --- 3. LÓGICA DEL CARRITO ---
+        function addToCart(id) {
+            const product = products.find(p => p.id === id);
+            const existingItem = cart.find(item => item.id === id);
+
+            if (existingItem) {
+                existingItem.qty++;
+            } else {
+                cart.push({ ...product, qty: 1 });
+            }
+            updateCartUI();
+            toggleCart(true); // Abrir carrito al agregar
+        }
+
+        function removeFromCart(id) {
+            cart = cart.filter(item => item.id !== id);
+            updateCartUI();
+        }
+
+        function updateQty(id, change) {
+            const item = cart.find(item => item.id === id);
+            if (item) {
+                item.qty += change;
+                if (item.qty <= 0) removeFromCart(id);
+                else updateCartUI();
+            }
+        }
+
+        function updateCartUI() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            const cartCount = document.getElementById('cart-count');
+            const cartTotal = document.getElementById('cart-total');
+
+            // Actualizar contador
+            const totalQty = cart.reduce((acc, item) => acc + item.qty, 0);
+            cartCount.innerText = totalQty;
+            cartCount.style.opacity = totalQty > 0 ? '1' : '0';
+
+            // Calcular total
+            const total = cart.reduce((acc, item) => acc + (item.price * item.qty), 0);
+            cartTotal.innerText = `$${total.toFixed(2)}`;
+
+            // Renderizar items
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<p class="text-center text-gray-400 mt-10">Tu carrito está vacío.</p>';
+                return;
+            }
+
+            cartItemsContainer.innerHTML = cart.map(item => `
+                <div class="flex gap-4 items-center fade-in">
+                    <img src="${item.image}" class="w-16 h-20 object-cover bg-gray-100">
+                    <div class="flex-1">
+                        <h4 class="font-medium text-sm">${item.name}</h4>
+                        <p class="text-gray-500 text-xs mb-2">$${item.price}</p>
+                        <div class="flex items-center gap-3">
+                            <button onclick="updateQty(${item.id}, -1)" class="w-6 h-6 bg-gray-100 rounded flex items-center justify-center hover:bg-gray-200">-</button>
+                            <span class="text-sm">${item.qty}</span>
+                            <button onclick="updateQty(${item.id}, 1)" class="w-6 h-6 bg-gray-100 rounded flex items-center justify-center hover:bg-gray-200">+</button>
+                        </div>
+                    </div>
+                    <button onclick="removeFromCart(${item.id})" class="text-gray-400 hover:text-red-500"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            `).join('');
+        }
+
+        // --- 4. INTERFAZ Y EVENTOS ---
+        function toggleCart(forceOpen = false) {
+            const panel = document.getElementById('cart-panel');
+            const overlay = document.getElementById('cart-overlay');
+            
+            if (forceOpen || panel.classList.contains('translate-x-full')) {
+                panel.classList.remove('translate-x-full');
+                overlay.classList.remove('hidden');
+                setTimeout(() => overlay.classList.remove('opacity-0'), 10);
+            } else {
+                panel.classList.add('translate-x-full');
+                overlay.classList.add('opacity-0');
+                setTimeout(() => overlay.classList.add('hidden'), 300);
+            }
+        }
+
+        // Filtros
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => {
+                    b.classList.remove('bg-black', 'text-white', 'border-black');
+                    b.classList.add('text-black', 'border-gray-200');
+                });
+                btn.classList.remove('text-black', 'border-gray-200');
+                btn.classList.add('bg-black', 'text-white', 'border-black');
+                
+                renderProducts(btn.dataset.category, document.getElementById('search-input').value);
+            });
+        });
+
+        // Buscador
+        document.getElementById('search-input').addEventListener('input', (e) => {
+            const activeCategory = document.querySelector('.filter-btn.bg-black').dataset.category;
+            renderProducts(activeCategory, e.target.value);
+        });
+
+        // Simulación de Checkout
+        function checkout(method) {
+            if (cart.length === 0) {
+                alert("Tu carrito está vacío.");
+                return;
+            }
+            // Aquí iría la integración real con Stripe/PayPal SDK
+            const amount = cart.reduce((acc, item) => acc + (item.price * item.qty), 0);
+            alert(`Iniciando proceso de pago con ${method.toUpperCase()} por $${amount.toFixed(2)}...\n\n(En un entorno real, esto redirigiría a la pasarela de pago segura).`);
+            cart = [];
+            updateCartUI();
+            toggleCart();
+        }
+
+        // Inicializar
+        renderProducts();
+    </script>
+</body>
+</html>
