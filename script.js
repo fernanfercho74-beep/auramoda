@@ -128,7 +128,7 @@ const products = [
 
   {
     id: 9,
-    name: "Frannela de caballero micro durazno",
+    name: "Frannela micro durazno",
     price: 6,
     category: "Franela",
     images: [
@@ -143,6 +143,39 @@ const products = [
     sizes: ["40","41","42","43","44"],
     colors: ["black","white"]
   },
+    {
+    id: 10,
+    name: "Vestido de dama Elegante",
+    price: 15,
+    category: "vestido",
+    images: [
+      "https://i.ibb.co/gbdyrvNx/7c5f7054-20fa-43f4-9537-3b4f973b5b21.jpg",
+      "https://i.ibb.co/FkMX2ynY/32d0c2fd-f2f2-4c51-8562-e797b8722f80.jpg",
+      "https://i.ibb.co/23YYc9Fs/715fe127-f8e4-4049-828e-73d3635a0bfd.jpg",
+      "https://i.ibb.co/ccDTXQjL/cb5fc80e-65a3-46fb-81c4-caeb2f9512ab.jpg",
+      "https://i.ibb.co/GfgfDLK6/d9754245-604a-4acc-ac69-654bc8ec079d.jpg"  
+    ],
+    
+  
+    colors: ["black","white"]
+  },
+   {
+    id: 11,
+    name: "Vestido de dama Elegante",
+    price: 15,
+    category: "vestido",
+    images: [
+      "https://i.ibb.co/JWwxJ7QQ/4a2c3285-b85f-4df6-889a-2d42ff929e8f.jpg", 
+      "https://i.ibb.co/N2HCnysF/f7b924bb-f2a3-4a5a-812e-732581e5d3bc.jpg",
+      "https://i.ibb.co/XxcqB87f/6e38e6e4-b15c-4f54-a8c4-3f39baf7d908.jpg",
+      "https://i.ibb.co/JWwxJ7QQ/4a2c3285-b85f-4df6-889a-2d42ff929e8f.jpg",
+      "https://i.ibb.co/kVdz9R3c/e148db39-0964-4e80-9359-55b8a98bbc72.jpg"
+    ],
+    
+  
+    colors: ["black","white"]
+  },
+  
   
 ];
 
