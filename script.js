@@ -1,7 +1,164 @@
 // ===== DATOS DE PRODUCTOS =====
 const products = [
+
+
+       {
+    id: 17,
+    name: "Vestido Armani Talla Unica",
+    price: 6,
+    category: "Vestido",
+    images: [
+     "https://i.ibb.co/NngpP84t/ml1.jpg",
+      "https://i.ibb.co/7xYX5d75/ml3.jpg",
+      "https://i.ibb.co/d022QNFL/ml2.jpg",
+      "https://i.ibb.co/KxybWsPk/ml4.jpg",
+      "https://i.ibb.co/4RCP9Hbg/ml.jpg" 
+    ],
+    
+    badge: "sale",
+    originalPrice: 8,
+    sizes: ["40","41","42","43","44"],
+    colors: ["black","white"]
+  },
+
+
+       {
+    id: 16,
+    name: "Franelas para Damas",
+    price: 7,
+    category: "Franela de dama",
+    images: [
+     "https://i.ibb.co/PvD70Y9G/Captura-de-pantalla-2026-02-26-10153322.jpg",
+      "https://i.ibb.co/23w9nNnV/4dbe84eb-2a97-4727-8354-2573a17320ee.jpg" ,
+      "https://i.ibb.co/TDTJ8Kdr/Captura-de-pantalla-2026-02-26-101753s.jpg",
+      "https://i.ibb.co/QFW2M5DJ/a90c542d-79b4-491e-b347-e32e544cde71.jpg" 
+    ],
+    
+    badge: "sale",
+    originalPrice: 10,
+    sizes: ["40","41","42","43","44"],
+    colors: ["black","white"]
+  },
+
+
+    {
+    id: 15,
+    name: "Ropa para Dormir",
+    price: 10,
+    category: "Dormilona",
+    images: [
+     "https://i.ibb.co/ym7Tw5XZ/79b79a59-701d-45d3-b5d8-8081817d3f13.jpg",
+      "https://i.ibb.co/pBxLKM6W/25faa34f-6ae9-4469-85a8-0260e0aacb81.jpg" ,
+      
+      "https://i.ibb.co/twq9WdR0/f933fb64-9e2b-40d1-ac07-9bc81ed1e231.jpg"
+    ],
+    
+    badge: "sale",
+    originalPrice: 15,
+    sizes: ["40","41","42","43","44"],
+    colors: ["black","white"]
+  },
+
+
+     {
+    id: 14,
+    name: "Pantalon para Damas",
+    price: 10,
+    category: "Pantalon",
+    images: [
+     "https://i.ibb.co/VW90sR0j/ddab8ed7-bf8a-46ed-a935-62aa7334ec4d-1.jpg",
+      "https://i.ibb.co/4wtRxGcS/rosado.jpg" ,
+      "https://i.ibb.co/23bzhpVV/e3406712-661e-4cd0-8cd9-08ef1f333d21.jpg",
+      "https://i.ibb.co/3yXwK8TV/ddab8ed7-bf8a-46ed-a935-62aa7334ec4d.jpg"
+    ],
+    
+    badge: "sale",
+    originalPrice: 15,
+    sizes: ["40","41","42","43","44"],
+    colors: ["black","white"]
+  },
+  
+   {
+    id: 13,
+    name: "Conjuntos Gucci Plus",
+    price: 16,
+    category: "conjunto",
+    images: [
+      "https://i.ibb.co/FbXCnkBG/44458a02-cfd3-4dca-aa7a-5cb453dfa28f.jpg" ,
+      "https://i.ibb.co/gZ0Hw89N/02b0662b-eb4a-4ea9-8dfa-28e66ea86847.jpg" ,
+      "https://i.ibb.co/cc255MHQ/3866d8fe-9c4a-42a3-bedf-97f626670b80.jpg",
+      "https://i.ibb.co/C319GZF6/12259787-b3c7-4357-ae4c-15d6d39ddaea.jpg"
+    ],
+    
+    badge: "sale",
+    originalPrice: 23,
+    sizes: ["40","41","42","43","44"],
+    colors: ["black","white"]
+  },
+
+  
+  
+  
+  
+  
+   {
+    id: 12,
+    name: "Conjuntos de dama",
+    price: 19,
+    category: "Mono",
+    images: [
+      "https://i.ibb.co/twDp8BPW/cv1.jpg",
+      "https://i.ibb.co/R43W1DN8/cv2.jpg",
+      "https://i.ibb.co/C3grrFLw/cv4.jpg",
+      "https://i.ibb.co/9Hvm62wq/cv3.jpg" 
+    ],
+    
+    badge: "sale",
+    originalPrice: 23,
+    sizes: ["40","41","42","43","44"],
+    colors: ["black","white"]
+  },
+
+  
+  
   {
-    id: 1,
+    id: 11,
+    name: "Vestido de dama Elegante",
+    price: 16,
+    category: "vestido",
+    images: [
+      "https://i.ibb.co/gbdyrvNx/7c5f7054-20fa-43f4-9537-3b4f973b5b21.jpg",
+      "https://i.ibb.co/FkMX2ynY/32d0c2fd-f2f2-4c51-8562-e797b8722f80.jpg",
+      "https://i.ibb.co/23YYc9Fs/715fe127-f8e4-4049-828e-73d3635a0bfd.jpg",
+      "https://i.ibb.co/ccDTXQjL/cb5fc80e-65a3-46fb-81c4-caeb2f9512ab.jpg",
+      "https://i.ibb.co/GfgfDLK6/d9754245-604a-4acc-ac69-654bc8ec079d.jpg"  
+    ],
+    
+  
+    colors: ["black","white"]
+    
+  },
+
+  {
+    id: 10,
+    name: "Vestido de dama Elegante",
+    price: 16,
+    category: "vestido",
+    images: [
+      "https://i.ibb.co/JWwxJ7QQ/4a2c3285-b85f-4df6-889a-2d42ff929e8f.jpg", 
+      "https://i.ibb.co/N2HCnysF/f7b924bb-f2a3-4a5a-812e-732581e5d3bc.jpg",
+      "https://i.ibb.co/XxcqB87f/6e38e6e4-b15c-4f54-a8c4-3f39baf7d908.jpg",
+      "https://i.ibb.co/JWwxJ7QQ/4a2c3285-b85f-4df6-889a-2d42ff929e8f.jpg",
+      "https://i.ibb.co/kVdz9R3c/e148db39-0964-4e80-9359-55b8a98bbc72.jpg"
+    ],
+    
+  
+    colors: ["black","white"]
+  },
+  
+
+  {
+    id: 9,
     name: "Franela de Algodon",
     price: 10,
     category: "mujer",
@@ -18,9 +175,9 @@ const products = [
     colors: ["blue","black"]
   },
   {
-    id: 2,
+    id: 8,
     name: "Franelas Deportiva",
-    price: 7,
+    price: 6,
     category: "hombre",
     images: [
       "https://i.ibb.co/SwwcFfbs/n1.jpg",
@@ -34,7 +191,7 @@ const products = [
     colors: ["white","brown"]
   },
   {
-    id: 3,
+    id: 7,
     name: "Blusa de Dama Con Piedreria",
     price: 8,
     category: "Mujer",
@@ -47,7 +204,7 @@ const products = [
     colors: ["white","blue","black"]
   },
   {
-    id: 4,
+    id: 6,
     name: "Vestido de Dama",
     price: 18,
     category: "Mujer",
@@ -65,12 +222,12 @@ const products = [
   {
     id: 5,
     name: "Licra de Dama",
-    price: 7,
+    price: 6,
     category: "Mujer",
     images: [
       "https://i.ibb.co/G4Mxfz5b/L1.jpg" ,
       "https://i.ibb.co/m5n8m9Sm/L3.jpg" ,
-      "https://i.ibb.co/Gf5sZ0PL/L4.jpg",
+      "https://i.ibb.co/whPCGHYq/2baaf6af-5b26-4817-bbf2-cda5fb625bcc.jpg" ,
       "https://i.ibb.co/BHjZGvyG/L2.jpg"
     ],
     badge: "new",
@@ -78,7 +235,7 @@ const products = [
     colors: ["blue","green"]
   },
   {
-    id: 6,
+    id: 4,
     name: "Conjuntos para Niñas",
     price: 6,
     category: "Niñas",
@@ -93,12 +250,12 @@ const products = [
     colors: ["brown","black"]
   },
   {
-    id: 7,
+    id: 3,
     name: "Conjuntos para Niños",
     price: 6,
     category: "Niños",
     images: [
-      "https://i.ibb.co/jkmfg2jR/t4.jpg",
+      
       "https://i.ibb.co/Z1641f8C/3b75a748-999a-43d1-89fb-284bed39d093.jpg",
       "https://i.ibb.co/0yHn7vqZ/75e83fdf-7afb-4898-a7c1-58b78979fca4.jpg" 
     ],
@@ -108,26 +265,9 @@ const products = [
     sizes: ["40","41","42","43","44"],
     colors: ["black","white"]
   },
-   {
-    id: 8,
-    name: "Conjuntos de dama",
-    price: 6,
-    category: "Mono",
-    images: [
-      "https://i.ibb.co/twDp8BPW/cv1.jpg",
-      "https://i.ibb.co/R43W1DN8/cv2.jpg",
-      "https://i.ibb.co/C3grrFLw/cv4.jpg",
-      "https://i.ibb.co/9Hvm62wq/cv3.jpg" 
-    ],
-    
-    badge: "sale",
-    originalPrice: 9,
-    sizes: ["40","41","42","43","44"],
-    colors: ["black","white"]
-  },
-
+  
   {
-    id: 9,
+    id: 1,
     name: "Frannela micro durazno",
     price: 6,
     category: "Franela",
@@ -143,39 +283,8 @@ const products = [
     sizes: ["40","41","42","43","44"],
     colors: ["black","white"]
   },
-    {
-    id: 10,
-    name: "Vestido de dama Elegante",
-    price: 15,
-    category: "vestido",
-    images: [
-      "https://i.ibb.co/gbdyrvNx/7c5f7054-20fa-43f4-9537-3b4f973b5b21.jpg",
-      "https://i.ibb.co/FkMX2ynY/32d0c2fd-f2f2-4c51-8562-e797b8722f80.jpg",
-      "https://i.ibb.co/23YYc9Fs/715fe127-f8e4-4049-828e-73d3635a0bfd.jpg",
-      "https://i.ibb.co/ccDTXQjL/cb5fc80e-65a3-46fb-81c4-caeb2f9512ab.jpg",
-      "https://i.ibb.co/GfgfDLK6/d9754245-604a-4acc-ac69-654bc8ec079d.jpg"  
-    ],
-    
   
-    colors: ["black","white"]
-  },
-   {
-    id: 11,
-    name: "Vestido de dama Elegante",
-    price: 15,
-    category: "vestido",
-    images: [
-      "https://i.ibb.co/JWwxJ7QQ/4a2c3285-b85f-4df6-889a-2d42ff929e8f.jpg", 
-      "https://i.ibb.co/N2HCnysF/f7b924bb-f2a3-4a5a-812e-732581e5d3bc.jpg",
-      "https://i.ibb.co/XxcqB87f/6e38e6e4-b15c-4f54-a8c4-3f39baf7d908.jpg",
-      "https://i.ibb.co/JWwxJ7QQ/4a2c3285-b85f-4df6-889a-2d42ff929e8f.jpg",
-      "https://i.ibb.co/kVdz9R3c/e148db39-0964-4e80-9359-55b8a98bbc72.jpg"
-    ],
-    
-  
-    colors: ["black","white"]
-  },
-  
+   
   
 ];
 
