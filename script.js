@@ -23,7 +23,7 @@ const products = [
 
 
        {
-    id: 16,
+    id: 10,
     name: "Franelas para Damas",
     price: 7,
     category: "Franela de dama",
@@ -44,7 +44,7 @@ const products = [
     {
     id: 15,
     name: "Ropa para Dormir",
-    price: 10,
+    price:6,
     category: "Dormilona",
     images: [
      "https://i.ibb.co/ym7Tw5XZ/79b79a59-701d-45d3-b5d8-8081817d3f13.jpg",
@@ -81,7 +81,7 @@ const products = [
    {
     id: 13,
     name: "Conjuntos Gucci Plus",
-    price: 16,
+    price: 12,
     category: "conjunto",
     images: [
       "https://i.ibb.co/FbXCnkBG/44458a02-cfd3-4dca-aa7a-5cb453dfa28f.jpg" ,
